@@ -1,0 +1,24 @@
+.profile__info_author {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #FFFFFF;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 294px;
+  margin: 0;
+}
+
+
+@media screen and (max-width: 690px) {
+  .profile__info_author {
+    margin-left: 46px;
+    max-width: 189px;
+    font-size: 27px;
+    line-height: 33px;
+    align-self: center;
+  }
+}
