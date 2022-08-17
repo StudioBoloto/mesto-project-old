@@ -10,3 +10,10 @@
 .popup__input:focus {
   outline: 0;
 }
+
+@media screen and (max-width: 468px) {
+  .popup__input {
+    width: 238px;
+
+  }
+}
