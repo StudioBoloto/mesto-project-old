@@ -8,7 +8,15 @@
 
 @font-face {
     font-family: 'Inter';
-    font-weight: 700;
-    src: url("../vendor/fonts/Inter/Inter-Bold.woff2") format("woff2"),
-    url("../vendor/fonts/Inter/Inter-Bold.woff") format("woff");
+    font-weight: 500;
+    src: url("../vendor/fonts/Inter/Inter-Medium.woff2") format("woff2"),
+    url("../vendor/fonts/Inter/Inter-Medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    src: url("../vendor/fonts/Inter/Inter-Black.woff2") format("woff2"),
+    url("../vendor/fonts/Inter/Inter-Black.woff") format("woff");
 }
