@@ -1,16 +1,22 @@
 .header {
-  max-width: 880px;
-  margin-right: auto;
-  margin-left: auto;
-  height: 74px;
-  padding-top: 45px;
-  padding-bottom: 40px;
+    max-width: 880px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 74px;
+    padding-top: 45px;
+    padding-bottom: 40px;
 }
 
 
 @media screen and (max-width: 690px) {
-  .header {
-    padding-top: 28px;
-    padding-bottom: 42px;
-  }
+    .header {
+        padding-top: 28px;
+        padding-bottom: 42px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .header {
+        height: 56px;
+    }
 }

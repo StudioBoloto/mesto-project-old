@@ -3,9 +3,8 @@
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: center;
-  max-width: 400px;
+  max-width: 336px;
   margin: 0;
-  padding-top: 22px;
 }
 
 
@@ -15,6 +14,5 @@
     margin-left: 19px;
     margin-right: 19px;
     max-width: 282px;
-    padding-top: 26px;
   }
 }
