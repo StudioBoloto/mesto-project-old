@@ -10,7 +10,6 @@
 <div class="page">
     <header class="header">
         <div class="header__logo"></div>
-        <div class="header__line"></div>
     </header>
     <main class="content">
         <section class="profile">
@@ -26,7 +25,7 @@
             <div class="elements__card">
                 <img src="https://autotravel.ru/phalbum/91477/188.jpg" alt="Карачаевск" class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Карачаевск</p>
+                    <h2 class="elements__title">Карачаевск</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
@@ -34,14 +33,14 @@
                 <img src="https://avatars.mds.yandex.net/i?id=b5c3df37f30c2bb52766e128b6e6b2b9_l-4571053-images-thumbs&n=13"
                      alt="Гора Эльбрус" class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Гора Эльбрус</p>
+                    <h2 class="elements__title">Гора Эльбрус</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
             <div class="elements__card">
                 <img src="https://s.mediasole.ru/images/566/566850/39s.jpg" alt="Домбай" class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Домбай</p>
+                    <h2 class="elements__title">Домбай</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
@@ -49,14 +48,14 @@
                 <img src="https://avatars.mds.yandex.net/i?id=b5c3df37f30c2bb52766e128b6e6b2b9_l-4571053-images-thumbs&n=13"
                      alt="Гора Эльбрус" class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Гора Эльбрус</p>
+                    <h2 class="elements__title">Гора Эльбрус</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
             <div class="elements__card">
                 <img src="https://s.mediasole.ru/images/566/566850/39s.jpg" alt="Домбай" class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Домбай</p>
+                    <h2 class="elements__title">Домбай</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
@@ -64,7 +63,7 @@
                 <img src="https://autotravel.ru/phalbum/91477/188.jpg" alt="Карачаево-Черкессия"
                      class="elements__image">
                 <div class="elements__wrapper">
-                    <p class="elements__text">Карачаево-Черкессия</p>
+                    <h2 class="elements__title">Карачаево-Черкессия</h2>
                     <button type="button" class="elements__like"></button>
                 </div>
             </div>
@@ -73,17 +72,13 @@
     <footer class="footer">
         <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_opened">
         <div class="popup__container">
             <button type="button" class="popup__close"></button>
-            <p class="popup__title">Редактировать профиль</p>
-            <label>
-                <input type="text" placeholder="Жак-Ив Кусто" class="popup__input">
-            </label>
-            <label>
-                <input type="text" placeholder="Исследователь океана" class="popup__input">
-            </label>
-            <button type="button" class="popup__save">Сохранить</button>
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <input type="text" placeholder="Жак-Ив Кусто" class="popup__input">
+            <input type="text" placeholder="Исследователь океана" class="popup__input">
+            <button type="submit" class="popup__save">Сохранить</button>
         </div>
     </div>
 </div>
