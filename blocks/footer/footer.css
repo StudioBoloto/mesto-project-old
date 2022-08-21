@@ -5,13 +5,11 @@
     padding-bottom: 60px;
 }
 
-
 @media screen and (max-width: 918px) {
     .footer {
         margin-left: 27px;
     }
 }
-
 
 @media screen and (max-width: 690px) {
     .footer {
@@ -20,5 +18,3 @@
         max-width: calc(100vw - 38px);
     }
 }
-
-

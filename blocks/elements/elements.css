@@ -10,7 +10,6 @@
     padding-bottom: 67px;
 }
 
-
 @media screen and (max-width: 918px) {
     .elements {
         grid-template-columns: repeat(2, 1fr);

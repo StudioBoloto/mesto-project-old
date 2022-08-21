@@ -1,4 +1,4 @@
-.profile__info_about {
+.profile__about {
   font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 400;
@@ -9,24 +9,24 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
-  max-width: 336px;
+  max-width: 250px;
   align-self: flex-end;
   padding-top: 16px;
 }
 
 
-@media screen and (max-width: 690px) {
-  .profile__info_about {
+@media screen and (max-width: 730px) {
+  .profile__about {
     font-size: 14px;
     line-height: 17px;
     padding-bottom: 36px;
     padding-top: 14px;
-    max-width: 282px;
+    max-width: 200px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .profile__info_about {
+  .profile__about {
     padding-top: 10px;
     padding-bottom: 33px;
   }

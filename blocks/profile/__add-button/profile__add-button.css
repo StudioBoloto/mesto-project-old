@@ -22,9 +22,10 @@
 }
 
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 730px) {
     .profile__add-button {
         width: 282px;
         margin: 0;
+        background: transparent url("../../../images/add-button-320px/add-button-320px.svg") no-repeat 50% 50%;
     }
 }

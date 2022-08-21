@@ -11,7 +11,7 @@
     }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 730px) {
     .profile__avatar {
         margin-left: calc((100vw / 2) - 60px + 1px);
         margin-right: calc((100vw / 2) - 60px - 1px);

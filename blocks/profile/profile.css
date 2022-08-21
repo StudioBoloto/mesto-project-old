@@ -6,16 +6,12 @@
     padding-top: 40px;
     padding-bottom: 51px;
     align-items: center;
-    height: 120px;
 }
 
-
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 730px) {
     .profile {
         padding-top: 42px;
         padding-bottom: 36px;
         flex-direction: column;
-        height: 286px;
     }
 }
-

@@ -1,10 +1,11 @@
 .popup__input {
+    font-family: 'Inter', serif;
     margin-bottom: 30px;
     width: 358px;
     border-left: 0;
     border-right: 0;
     border-top: 0;
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .popup__input:focus {
