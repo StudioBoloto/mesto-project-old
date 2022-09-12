@@ -4,4 +4,5 @@
     overflow: hidden;
     align-self: center;
     justify-self: center;
+    position: relative;
 }

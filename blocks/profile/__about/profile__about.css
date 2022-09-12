@@ -10,6 +10,7 @@
   overflow: hidden;
   white-space: nowrap;
   max-width: 250px;
+  min-width: 250px;
   align-self: flex-end;
   padding-top: 16px;
 }
@@ -22,6 +23,7 @@
     padding-bottom: 36px;
     padding-top: 14px;
     max-width: 200px;
+    min-width: 200px;
   }
 }
 
