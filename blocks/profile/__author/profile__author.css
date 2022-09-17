@@ -9,6 +9,7 @@
     overflow: hidden;
     white-space: nowrap;
     max-width: 294px;
+    min-width: 45px;
     margin: 0;
 }
 
@@ -19,6 +20,7 @@
         line-height: 33px;
         align-self: center;
         padding-top: 26px;
+        min-width: 0;
     }
 }
 
