@@ -42,11 +42,11 @@
         <div class="popup__container">
             <button type="button" class="popup__close-button" id="btnCloseEdit"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
-            <form class="popup__form" name="profile-edit">
+            <form class="popup__form" name="profile-edit" id="popupEditProfile">
                 <input name="author" type="text" placeholder="Имя" class="popup__input" id="edit-profile-name">
                 <input name="about" type="text" placeholder="Вид деятельности" class="popup__input"
                        id="edit-profile-title">
-                <button type="button" class="popup__save-button" id="btn-submit-edit">Сохранить</button>
+                <button type="submit" class="popup__save-button" id="btn-submit-edit">Сохранить</button>
             </form>
         </div>
     </div>
@@ -54,10 +54,10 @@
         <div class="popup__container">
             <button type="button" class="popup__close-button" id="btnCloseAdd"></button>
             <h2 class="popup__title">Новое место</h2>
-            <form class="popup__form" name="profile-edit">
+            <form class="popup__form" name="profile-edit" id="popupAddCard">
                 <input name="title" type="text" placeholder="Название" class="popup__input" id="add-card-title">
                 <input name="link" type="text" placeholder="Ссылка на картинку" class="popup__input" id="add-card-link">
-                <button type="button" class="popup__save-button" id="btn-submit-add">Создать</button>
+                <button type="submit" class="popup__save-button" id="btn-submit-add">Создать</button>
             </form>
         </div>
     </div>
