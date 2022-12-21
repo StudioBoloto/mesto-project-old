@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesto</title>
-    <link rel="stylesheet" href="pages/index.css">
+    <link rel="stylesheet" href="src/pages/index.css">
 </head>
 <body>
 <div class="page">
@@ -13,7 +13,7 @@
     </header>
     <main class="content">
         <section class="profile">
-            <img src="images/avatar/avatar.svg" alt="Аватар" class="profile__avatar">
+            <img src="src/images/avatar/avatar.svg" alt="Аватар" class="profile__avatar">
             <div class="profile__info">
                 <h1 class="profile__author">Жак-Ив Кусто</h1>
                 <button type="button" class="profile__edit-button" id="btn-open-edit"></button>
@@ -43,9 +43,22 @@
             <button type="button" class="popup__close-button" id="btnCloseEdit"></button>
             <h2 class="popup__title">Редактировать профиль</h2>
             <form class="popup__form" name="profile-edit" id="popupEditProfile">
-                <input name="author" type="text" placeholder="Имя" class="popup__input" id="edit-profile-name">
-                <input name="about" type="text" placeholder="Вид деятельности" class="popup__input"
-                       id="edit-profile-title">
+                <label class="popup__label">
+                    <input name="author" type="text" placeholder="Имя" class="popup__input" id="edit-profile-name"
+                           required data-empty-error="Вы пропустили это поле."
+                           data-symbols-error="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+                           data-length-error="Минимальное количество символов: 2. Длина текста сейчас: 1 символ."
+                           minlength="2" maxlength="40">
+                    <span class="popup__input_error edit-profile-name-error"></span>
+                </label>
+                <label class="popup__label">
+                    <input name="about" type="text" placeholder="Вид деятельности" class="popup__input"
+                           id="edit-profile-title" required minlength="2" maxlength="200"
+                           data-empty-error="Вы пропустили это поле."
+                           data-symbols-error="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+                           data-length-error="Минимальное количество символов: 2. Длина текста сейчас: 1 символ.">
+                    <span class="popup__input_error edit-profile-title-error"></span>
+                </label>
                 <button type="submit" class="popup__save-button" id="btn-submit-edit">Сохранить</button>
             </form>
         </div>
@@ -55,9 +68,23 @@
             <button type="button" class="popup__close-button" id="btnCloseAdd"></button>
             <h2 class="popup__title">Новое место</h2>
             <form class="popup__form" name="profile-edit" id="popupAddCard">
-                <input name="title" type="text" placeholder="Название" class="popup__input" id="add-card-title">
-                <input name="link" type="text" placeholder="Ссылка на картинку" class="popup__input" id="add-card-link">
-                <button type="submit" class="popup__save-button" id="btn-submit-add">Создать</button>
+                <label class="popup__label">
+                    <input name="title" type="text" placeholder="Название" class="popup__input" id="add-card-title"
+                           minlength="2" maxlength="30" required data-empty-error="Вы пропустили это поле."
+                           data-symbols-error="Разрешены только латинские, кириллические буквы, знаки дефиса и пробелы."
+                           data-length-error="Минимальное количество символов: 2. Длина текста сейчас: 1 символ.">
+                    <span class="popup__input_error add-card-title-error"></span>
+                </label>
+                <label class="popup__label">
+                    <input name="link" type="url" placeholder="Ссылка на картинку" class="popup__input"
+                           id="add-card-link"
+                           required data-url-error="Введите адрес сайта."
+                    >
+                    <span class="popup__input_error add-card-link-error"></span>
+                </label>
+                <label class="popup__save-button-add-card">
+                    <button type="submit" class="popup__save-button" id="btn-submit-add">Создать</button>
+                </label>
             </form>
         </div>
     </div>
@@ -69,7 +96,6 @@
         </div>
     </div>
 </div>
-<script src="scripts/constants.js"></script>
-<script src="pages/index.js"></script>
+<script type="module" src="src/components/index.js"></script>
 </body>
 </html>
