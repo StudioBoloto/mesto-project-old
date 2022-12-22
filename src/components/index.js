@@ -1,3 +1,4 @@
+import '../pages/index.css';
 import {addCard, editProfile, createCard, cardsContainer} from "./card.js";
 import {toggleButtonState} from "./utils.js";
 import {checkInputValidity} from "./validate.js";
