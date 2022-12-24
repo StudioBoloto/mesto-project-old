@@ -51,9 +51,6 @@ modalAddCardForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     addCard(inputCardName.value, inputCardLink.value, myConfiguration);
     modalAddCardForm.reset();
-    const buttonElement = modalAddCardForm.querySelector(myConfiguration.addCardButtonSelector);
-    buttonElement.classList.add(myConfiguration.inactiveButtonClass);
-    buttonElement.setAttribute('disabled', 'disabled');
     closePopup(modalAddCard, myConfiguration);
 });
 
