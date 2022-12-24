@@ -1,15 +1,11 @@
-import {hasInvalidInput} from "./validate.js";
+import {myConfiguration} from "./constants";
+import {closePopup} from "./modal.js";
 
-export {toggleButtonState }
+export {handleEscape}
 
-function toggleButtonState(inputList, buttonElements, myConfiguration) {
-    buttonElements.forEach((buttonElement) => {
-        if (hasInvalidInput(inputList)) {
-            buttonElement.classList.add(myConfiguration.inactiveButtonClass);
-            buttonElement.setAttribute('disabled', 'disabled');
-        } else {
-            buttonElement.classList.remove(myConfiguration.inactiveButtonClass);
-            buttonElement.removeAttribute('disabled');
-        }
-    });
+function handleEscape(evt) {
+    if (evt.key === 'Escape') {
+        const openedPopup = document.querySelector('.popup_opened');
+        closePopup(openedPopup, myConfiguration);
+    }
 }

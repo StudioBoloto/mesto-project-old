@@ -1,9 +1,8 @@
-import {modalImage, profileAuthor, profileAbout} from "./modal.js";
 import {openPopup} from "./modal.js";
 
-export {addCard, editProfile, createCard, cardsContainer}
+export {addCard, createCard, cardsContainer}
 
-
+const modalImage = document.querySelector('#my-popup-image');
 const cardsContainer = document.querySelector('.elements');
 const cardTemplate = document.querySelector('#card-template').content;
 const modalImageName = document.querySelector('.popup__title-image');
@@ -35,10 +34,5 @@ function createCard(cardName, cardLink, myConfiguration) {
 
 function addCard(cardName, cardLink, myConfiguration) {
     const cardElement = createCard(cardName, cardLink, myConfiguration);
-    cardsContainer.insertBefore(cardElement, cardsContainer.firstChild);
-}
-
-function editProfile(profileName, profileTitle) {
-    profileAuthor.textContent = profileName;
-    profileAbout.textContent = profileTitle;
+    cardsContainer.prepend(cardElement);
 }
