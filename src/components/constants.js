@@ -32,6 +32,7 @@ const myConfiguration = {
     labelSelector: '.popup__label',
     inputSelector: '.popup__input',
     submitButtonSelector: '.popup__save-button',
+    closeButtonClass: 'popup__close-button',
     openedPopupClass: 'popup_opened',
     inactiveButtonClass: 'popup__save-button_inactive',
     addCardButtonSelector: '.popup__save-button-add-card',
