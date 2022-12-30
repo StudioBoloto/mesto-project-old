@@ -72,6 +72,7 @@ const setEventListeners = (formElement, myConfiguration) => {
 
     formElement.addEventListener('reset', () => {
         setTimeout(() => {
+            buttonElement.textContent = "Сохранение...";
             toggleButtonState(inputList, buttonElement, myConfiguration);
         }, 0);
     });
