@@ -1,35 +1,26 @@
 import '../pages/index.css';
-import {addCard, createCard, cardsContainer} from "./card.js";
+import {createCard, cardsContainer} from "./card.js";
 import {myConfiguration} from "./constants.js";
 import {enableValidation} from "./validate.js"
 import {editProfile, editAvatar} from "./modal.js"
-import {getMe, getInitialCards} from "./api.js";
+import {getUserInfo, getInitialCards} from "./api.js";
 
-export {myConfiguration, addCard};
+const allPromise = Promise.all([getUserInfo(), getInitialCards()]);
 
+allPromise.then(([userInfo, initialCards]) => {
+    editProfile(userInfo.name, userInfo.about);
+    editAvatar(userInfo.avatar);
+    myConfiguration.id = userInfo._id;
+    console.log(userInfo);
 
-getMe()
-    .then((result) => {
-        editProfile(result.name, result.about);
-        editAvatar(result.avatar);
-        myConfiguration.id = result._id;
-        console.log(result);
-    })
+    initialCards.forEach((initialCard) => {
+        const cardElement = createCard(initialCard.name, initialCard.link, myConfiguration, initialCard);
+        cardsContainer.append(cardElement);
+    });
+    console.log(initialCards);
+})
     .catch((err) => {
         console.log(err);
     });
-
-getInitialCards()
-    .then((result) => {
-        result.forEach((initialCard) => {
-            const cardElement = createCard(initialCard.name, initialCard.link, myConfiguration, initialCard);
-            cardsContainer.append(cardElement);
-        });
-        console.log(result);
-    })
-    .catch((err) => {
-        console.log(err);
-    });
-
 
 enableValidation(myConfiguration);

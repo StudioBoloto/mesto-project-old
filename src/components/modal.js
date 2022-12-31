@@ -1,9 +1,9 @@
 import {addCard} from "./card.js";
 import {myConfiguration} from "./constants.js";
-import {handleEscape} from "./utils.js";
+import {handleEscape, closePopup, renderLoading} from "./utils.js";
 import {patchAvatar, patchProfile} from "./api.js"
 
-export {openPopup, closePopup, editProfile, editAvatar}
+export {openPopup, editProfile, editAvatar, modalAddCard, modalAddCardForm}
 
 const profileInfo = document.querySelector('.profile__info');
 const profileAuthor = profileInfo.querySelector('.profile__author');
@@ -30,12 +30,6 @@ function openPopup(popup, myConfiguration) {
 
 }
 
-function closePopup(popup, myConfiguration) {
-    popup.classList.remove(myConfiguration.openedPopupClass);
-    document.removeEventListener('keydown', handleEscape);
-
-}
-
 const popups = Array.from(document.querySelectorAll('.popup'));
 
 popups.forEach((popup) => {
@@ -54,6 +48,7 @@ function editProfile(profileName, profileTitle) {
         .then((result) => {
             profileAuthor.textContent = result.name;
             profileAbout.textContent = result.about;
+            closePopup(modalEditProfile, myConfiguration);
         })
         .catch((err) => {
             console.log(err);
@@ -64,6 +59,8 @@ function editAvatar(avatarLink) {
     patchAvatar(avatarLink)
         .then((result) => {
             profileAvatar.src = result.avatar;
+            modalEditAvatar.reset();
+            closePopup(modalAvatar, myConfiguration);
         })
         .catch((err) => {
             console.log(err);
@@ -73,37 +70,32 @@ function editAvatar(avatarLink) {
 modalEditAvatar.addEventListener('submit', function (evt) {
     evt.preventDefault();
     editAvatar(inputAvatarLink.value);
-    modalEditAvatar.reset();
-    closePopup(modalAvatar, myConfiguration);
 });
 
 modalAvatarOpen.addEventListener('click', function () {
-    modalAvatar.querySelector(myConfiguration.submitButtonSelector).textContent = "Создать";
+    renderLoading(modalAvatar, myConfiguration.createButtonLabel);
     openPopup(modalAvatar, myConfiguration);
 });
 
 modalAddCardForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
     addCard(inputCardName.value, inputCardLink.value, myConfiguration);
-    modalAddCardForm.reset();
-    closePopup(modalAddCard, myConfiguration);
 });
 
 modalEditProfileForm.addEventListener('submit', function (evt) {
     evt.preventDefault();
-    modalEditProfileForm.querySelector(myConfiguration.submitButtonSelector).textContent = "Сохранение...";
+    renderLoading(modalEditProfileForm, myConfiguration.progressButtonLabel);
     editProfile(inputUserName.value, inputUserTitle.value);
-    closePopup(modalEditProfile, myConfiguration);
 });
 
 btnOpenAddCardModal.addEventListener('click', function () {
-    modalAddCard.querySelector(myConfiguration.submitButtonSelector).textContent = "Создать";
+    renderLoading(modalAddCard, myConfiguration.createButtonLabel);
     openPopup(modalAddCard, myConfiguration);
 });
 
 btnOpenEditProfileModal.addEventListener('click', function () {
     inputUserName.value = profileAuthor.textContent;
     inputUserTitle.value = profileAbout.textContent;
-    modalEditProfile.querySelector(myConfiguration.submitButtonSelector).textContent = "Сохранить";
+    renderLoading(modalEditProfile, myConfiguration.saveButtonLabel);
     openPopup(modalEditProfile, myConfiguration);
 });
