@@ -1,5 +1,6 @@
-import {openPopup} from "./modal.js";
+import {openPopup, modalAddCard, modalAddCardForm} from "./modal.js";
 import {deleteCard, pushCard, toggleLike} from "./api.js";
+import {closePopup} from "./utils";
 
 export {addCard, createCard, cardsContainer}
 
@@ -72,6 +73,8 @@ function addCard(cardName, cardLink, myConfiguration) {
         .then((result) => {
             const cardElement = createCard(cardName, cardLink, myConfiguration, result);
             cardsContainer.prepend(cardElement);
+            modalAddCardForm.reset();
+            closePopup(modalAddCard, myConfiguration);
             console.log(result);
         })
         .catch((err) => {

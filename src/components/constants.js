@@ -19,5 +19,8 @@ const myConfiguration = {
     elementsLikeActiveClass: 'elements__like_active',
     elementsLikeCountClass: '.elements__like-counter',
     deleteButtonSelector: '#delete-button',
-    avatarSelector: '#avatar-image'
+    avatarSelector: '#avatar-image',
+    createButtonLabel: 'Создать',
+    progressButtonLabel: 'Сохранение...',
+    saveButtonLabel: 'Сохранить'
 }
