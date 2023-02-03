@@ -1,10 +1,11 @@
 import '../pages/index.css';
 
-import {Api} from "./api.js";
-import {PopupWithForm} from "./modal.js";
-import {FormValidator} from "./validate.js";
-import {Card} from "./card.js";
-import {UserInfo, Section} from "./utils.js";
+import {Api} from "./Api.js";
+import {PopupWithForm} from "./PopupWithForm.js";
+import {FormValidator} from "./FormValidator.js";
+import {Card} from "./Card.js";
+import {UserInfo} from "./UserInfo.js";
+import {Section} from "./Section.js";
 import {myConfiguration} from "./constants.js";
 
 

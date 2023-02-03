@@ -48,4 +48,3 @@ const myConfiguration = {
     },
     id: undefined,
 }
-

@@ -1,7 +1,6 @@
 import {api, cardTemplate} from "./index.js";
-import {PopupWithImage} from "./modal.js";
-import {myConfiguration} from "./constants";
-
+import {PopupWithImage} from "./PopupWithImage.js"
+import {myConfiguration} from "./constants.js";
 
 export class Card {
     constructor(data, selector) {
