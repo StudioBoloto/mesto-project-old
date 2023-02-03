@@ -3,7 +3,7 @@ import {PopupWithImage} from "./PopupWithImage.js";
 import {myConfiguration} from "./constants";
 
 
-export class Ard {
+export class Card {
     constructor(data, selector) {
         this._data = data;
         this._selector = selector;
