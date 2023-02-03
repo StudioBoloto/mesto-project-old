@@ -1,9 +1,9 @@
 import {api, cardTemplate} from "./index.js";
-import {PopupWithImage} from "./PopupWithImage.js";
+import {PopupWithImage} from "./modal.js";
 import {myConfiguration} from "./constants";
 
 
-export class Ard {
+export class Card {
     constructor(data, selector) {
         this._data = data;
         this._selector = selector;
