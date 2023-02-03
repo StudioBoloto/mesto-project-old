@@ -1,10 +1,11 @@
 import '../pages/index.css';
 
-import {Api} from "./api.js";
-import {PopupWithForm} from "./modal.js";
-import {FormValidator} from "./validate.js";
-import {Card} from "./card.js";
-import {UserInfo, Section} from "./utils.js";
+import {Api} from "./Api.js";
+import {PopupWithForm} from "./PopupWithForm.js";
+import {FormValidator} from "./FormValidator.js";
+import {Ard} from "./Сard.js";
+import {UserInfo} from "./UserInfo.js";
+import {Section} from "./Section.js";
 import {myConfiguration} from "./constants.js";
 
 
@@ -27,7 +28,7 @@ allPromise.then(([userProfile, initialCards]) => {
     const cardsContainer = new Section({
         data: initialCards,
         renderer: (item) => {
-            const card = new Card(item, myConfiguration.elementsCardSelector);
+            const card = new Ard(item, myConfiguration.elementsCardSelector);
             const cardElement = card.createCard();
             cardsContainer.addItem(cardElement);
         }
@@ -44,7 +45,7 @@ function addCard(data) {
             const cardsContainer = new Section({
                 data: [result],
                 renderer: (item) => {
-                    const card = new Card(item, myConfiguration.elementsCardSelector);
+                    const card = new Ard(item, myConfiguration.elementsCardSelector);
                     const cardElement = card.createCard();
                     cardsContainer.addItem(cardElement, true);
                 }
